@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 <x-app-layout>
-    <x-slot name="header">
-    </x-slot>
+    <x-slot name="header"></x-slot>
+    
 
     @yield('content')
     <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
