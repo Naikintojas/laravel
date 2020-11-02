@@ -7,21 +7,12 @@
         {{ csrf_field() }}
         {{ method_field('PUT') }}
       <div class="form-group">
-        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="lastname" placeholder="Enter lastname" name="lastname">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="cname" placeholder="Enter Company name" name="cname">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="date" placeholder="Enter date u started" name="date">
+        <input type="text" class="form-control" id="name" placeholder="{{$post->name}}" name="name">
       </div>
       <div class="form-group"> 
-        <input type="text" class="form-control" id="about" placeholder="Tell us more about your company" name="about">
+        <input type="text" class="form-control" id="about" placeholder="{{$post->about}}" name="about">
       </div>
-      <button type="submit" class="btn btn-default">Create</button>
+      <button type="submit" class="btn btn-default">Update</button>
     </form>
   </div>
 @endsection

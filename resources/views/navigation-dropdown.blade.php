@@ -8,7 +8,6 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="/posts" :active="request()->routeIs('dashboard')">All posts</x-jet-nav-link>
                     <x-jet-nav-link href="/posts/create" :active="request()->routeIs('dashboard')"> Add post  </x-jet-nav-link>
-                    <x-jet-nav-link href="/posts/create" :active="request()->routeIs('dashboard')"> My posts  </x-jet-nav-link>
                 </div>
             </div>
             <!-- Settings Dropdown -->

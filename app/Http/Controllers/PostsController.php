@@ -38,17 +38,11 @@ class PostsController extends Controller
     {
         $this->validate(request(),[
             'name' => 'required',
-            'lastname' => 'required',
-            'cname' => 'required',
-            'date' => 'required',
             'about' => 'required'
         ]);
         
         $posts = Post::create([
             'name' => request('name'),
-            'lastname' => request('lastname'),
-            'cname' => request('cname'),
-            'date' => request('date'),
             'about' => request('about')
         ]);
 
@@ -90,17 +84,11 @@ class PostsController extends Controller
     {
         $this->validate(request(),[
             'name' => 'required',
-            'lastname' => 'required',
-            'cname' => 'required',
-            'date' => 'required',
             'about' => 'required'
         ]);
         
         $posts = Post::find($id);
         $posts->name = $request->input('name');
-        $posts->lastname = $request->input('lastname');
-        $posts->cname = $request->input('cname');
-        $posts->date = $request->input('date');
         $posts->about = $request->input('about');
         $posts->save();
 
