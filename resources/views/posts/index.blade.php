@@ -9,15 +9,20 @@
     <table class="table table-bordered">
         <tr>
             <th>No.</th>
-            <th>Poll title</th>
-            <th>About the poll</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>specification</th>
+            <th>modules</th>
             <th width="300px">Actions</th>
         </tr>
         @foreach ($posts as $post)
         <tr>
             <td>{{ $post->id }}</td>
-            <td>{{ $post->name }}</td>
-            <td>{{ $post->about }}</td>
+            <td>{{ $post->title }}</td>
+            <td>{{ $post->aprasymas }}</td>
+            <td>{{ $post->specifikacija }}</td>
+            <td>{{ $post->moduliai }}</td>
+            <td>{{ $post->extra }}</td>
             <td>
             <a href="/posts/{{$post->id}}" class="btn btn-info">Show</a>
             <a href="/posts/{{$post->id}}/edit" class="btn btn-warning d-inline btn-xs">Edit</a>

@@ -6,10 +6,19 @@
     <form action="/posts" method="POST">
         {{ csrf_field() }}
       <div class="form-group">
-        <input type="text" class="form-control" id="name" placeholder="Enter fullname" name="name">
+        <input type="text" class="form-control" id="title" placeholder="Enter fullname" name="title">
       </div>
       <div class="form-group"> 
-        <input type="text" class="form-control" id="about" placeholder="Tell us more about this poll" name="about">
+        <input type="text" class="form-control" id="aprasymas" placeholder="Tell us more about this poll" name="aprasymas">
+      </div>
+      <div class="form-group"> 
+        <input type="text" class="form-control" id="specifikacija" placeholder="Tell us more about this poll" name="specifikacija">
+      </div>
+      <div class="form-group"> 
+        <input type="text" class="form-control" id="moduliai" placeholder="Tell us more about this poll" name="moduliai">
+      </div>
+      <div class="form-group"> 
+        <input type="text" class="form-control" id="extra" placeholder="Tell us more about this poll" name="extra">
       </div>
     
       <button type="submit" class="btn btn-default">Create</button>

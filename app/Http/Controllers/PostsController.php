@@ -37,13 +37,19 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this->validate(request(),[
-            'name' => 'required',
-            'about' => 'required'
+            'title' => 'required',
+            'aprasymas' => 'required',
+            'specifikacija' => 'required',
+            'moduliai' => 'required',
+            'extra' => 'required'
         ]);
         
         $posts = Post::create([
-            'name' => request('name'),
-            'about' => request('about')
+            'title' => request('title'),
+            'aprasymas' => request('aprasymas'),
+            'specifikacija' => request('specifikacija'),
+            'moduliai' => request('moduliai'),
+            'extra' => request('extra')
         ]);
 
         return redirect('/posts');
@@ -83,13 +89,19 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate(request(),[
-            'name' => 'required',
-            'about' => 'required'
+            'title' => 'required',
+            'aprasymas' => 'required',
+            'specifikacija' => 'required',
+            'moduliai' => 'required',
+            'extra' => 'required'
         ]);
         
         $posts = Post::find($id);
-        $posts->name = $request->input('name');
-        $posts->about = $request->input('about');
+        $posts->title = $request->input('title');
+        $posts->aprasymas = $request->input('aprasymas');
+        $posts->specifikacija = $request->input('specifikacija');
+        $posts->moduliai = $request->input('moduliai');
+        $posts->extra = $request->input('extra');
         $posts->save();
 
 
